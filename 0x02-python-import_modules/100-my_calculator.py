@@ -5,14 +5,16 @@ from calculator_1 import add, sub, mul, div
 
 def main():
     if len(sys.argv) == 4:
+        a = int(sys.argv[1])
+        b = int(sys.argv[3])
         if sys.argv[2] == "+":
-            print(f'{add(int(sys.argv[1]), int(sys.argv[3]))}')
+            print(f'{a} + {b} = {add(a, b)}')
         elif sys.argv[2] == "-":
-            print(f'{sub(int(sys.argv[1]), int(sys.argv[3]))}')
+            print(f'{a} - {b} = {sub(a, b)}')
         elif sys.argv[2] == "*":
-            print(f'{mul(int(sys.argv[1]), int(sys.argv[3]))}')
+            print(f'{a} * {b} = {mul(a, b)}')
         elif sys.argv[2] == "/":
-            print(f'{div(int(sys.argv[1]), int(sys.argv[3]))}')
+            print(f'{a} / {b} = {div(a, b)}')
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
