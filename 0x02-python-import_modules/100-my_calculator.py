@@ -15,6 +15,9 @@ def main():
             print(f'{a} * {b} = {mul(a, b)}')
         elif sys.argv[2] == "/":
             print(f'{a} / {b} = {div(a, b)}')
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
